@@ -41,7 +41,7 @@ Treinado no **IMDB Large Movie Review Dataset**:
 
 A rede foi projetada para capturar dependências locais e padrões textuais com alta eficiência computacional:
 
-
+```text
 =================================================================
  Layer (type)                 Output Shape              Param #   
 =================================================================
@@ -56,7 +56,7 @@ A rede foi projetada para capturar dependências locais e padrões textuais com 
  Dense (Sigmoid)              (None, 1)                 65        
 =================================================================
 ---
-
+```
 ## 📈 Desempenho e Resultados
 
 Resultados consolidados após 5 épocas de treinamento com algoritmo Adam e função de perda `binary_crossentropy`[cite: 2]:
