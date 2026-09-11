@@ -4,7 +4,7 @@
   <p><strong>Rede Neural Convolucional 1D para Mineração de Opinião e Análise de Sentimento</strong></p>
 
   <p>
-    <a href="https://colab.research.google.com/github/VegetaT2/lia1_2026_2_Thiago/blob/main/kerasimdb.ipynb">
+    <a href="https://colab.research.google.com/github/VegetaT2/lia1_2026_2_Thiago/blob/main/Entregas-Thiago_Tomaz/Atividade%202/kerasimdb.ipynb">
       <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
     </a>
     <img src="https://img.shields.io/badge/TensorFlow-2.x-FF6F00?logo=tensorflow&logoColor=white&style=flat-square" alt="TensorFlow">
