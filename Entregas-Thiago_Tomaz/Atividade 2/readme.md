@@ -4,7 +4,7 @@
   <p><strong>Rede Neural Convolucional 1D para Mineração de Opinião e Análise de Sentimento</strong></p>
 
   <p>
-    <a href="https://colab.research.google.com/github/SEU_USUARIO/SEU_REPOSITORIO/blob/main/NOME_DO_NOTEBOOK.ipynb">
+    <a href="https://colab.research.google.com/github/VegetaT2/lia1_2026_2_Thiago/blob/main/kerasimdb.ipynb">
       <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
     </a>
     <img src="https://img.shields.io/badge/TensorFlow-2.x-FF6F00?logo=tensorflow&logoColor=white&style=flat-square" alt="TensorFlow">
@@ -55,3 +55,52 @@ A rede foi projetada para capturar dependências locais e padrões textuais com 
  Dropout (0.5)                (None, 64)                0         
  Dense (Sigmoid)              (None, 1)                 65        
 =================================================================
+---
+
+## 📈 Desempenho e Resultados
+
+Resultados consolidados após 5 épocas de treinamento com algoritmo Adam e função de perda `binary_crossentropy`[cite: 2]:
+
+* **Acurácia no Teste:** `85.06%`[cite: 2]
+* **Loss no Teste:** `0.5631`[cite: 2]
+
+### Matriz de Métricas Detalhada (Conjunto de Teste)
+
+| Classe | Precision | Recall | F1-Score | Suporte |
+| :--- | :---: | :---: | :---: | :---: |
+| **Negativo (0)** | 0.82[cite: 2] | 0.89[cite: 2] | 0.86[cite: 2] | 12.500[cite: 2] |
+| **Positivo (1)** | 0.88[cite: 2] | 0.81[cite: 2] | 0.84[cite: 2] | 12.500[cite: 2] |
+| **Acurácia Média** | — | — | **0.85**[cite: 2] | **25.000**[cite: 2] |
+
+---
+
+## 🕷️ Testes com Críticas Reais: *Spider-Man: Brand New Day*
+
+Inferência em lote com resenhas textuais não rotuladas sobre o filme[cite: 2]:
+
+* **[1]** *"Spider-Man Brand New Day is exactly the fresh start Peter Parker needed. Tom Holland delivers a mature, grounded and deeply emotional performance, back in New York City with incredible street-level action."*[cite: 2]  
+  ➡️ **Sentimento Previsto:** `POSITIVO` | **Grau de Confiança:** `74.54%`[cite: 2]
+
+* **[2]** *"A massive disappointment. Brand New Day has a boring narrative, horrible pacing, and completely throws away Peter's development with forced drama and dull villains."*[cite: 2]  
+  ➡️ **Sentimento Previsto:** `NEGATIVO` | **Grau de Confiança:** `100.00%`[cite: 2]
+
+* **[3]** *"The swinging scenes look visually stunning and the raw physical combat in the streets was fantastic. It feels like classic comic book Spider-Man finally brought to life on the big screen."*[cite: 2]  
+  ➡️ **Sentimento Previsto:** `POSITIVO` | **Grau de Confiança:** `99.95%`[cite: 2]
+
+* **[4]** *"The plot was a convoluted mess. The emotional core fell totally flat and the dialogue felt uninspired and poorly written throughout the entire two hours."*[cite: 2]  
+  ➡️ **Sentimento Previsto:** `NEGATIVO` | **Grau de Confiança:** `100.00%`[cite: 2]
+
+* **[5]** *"An extraordinary return to form! The bittersweet tone of Peter dealing with his solitude while protecting the city creates one of the best superhero movies in years."*[cite: 2]  
+  ➡️ **Sentimento Previsto:** `POSITIVO` | **Grau de Confiança:** `100.00%`[cite: 2]
+
+* **[6]** *"Felt rushed and lifeless. Overhyped marketing for a generic movie that fails to deliver any real excitement or memorable moments."*[cite: 2]  
+  ➡️ **Sentimento Previsto:** `NEGATIVO` | **Grau de Confiança:** `100.00%`[cite: 2]
+
+---
+
+## 🚀 Como Executar no Google Colab
+
+Abra e execute o código interativo diretamente na nuvem:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/VegetaT2/lia1_2026_2_Thiago/blob/main/kerasimdb.ipynb)
+
