@@ -1,0 +1,75 @@
+# 🎬 Pipeline de NLP: Análise de Sentimento com TensorFlow & Keras
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SEU_USUARIO/SEU_REPOSITORIO/blob/main/NOME_DO_NOTEBOOK.ipynb)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Keras](https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=keras&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
+> *Da representação vetorial à extração semântica: transformando resenhas de cinema em probabilidades matematicamente calculadas.* 🚀
+
+---
+
+## 📌 Sumário
+- [Sobre o Projeto](#-sobre-o-projeto)
+- [Conjunto de Dados](#-conjunto-de-dados)
+- [Arquitetura da Rede](#-arquitetura-da-rede)
+- [Desempenho e Avaliação](#-desempenho-e-avaliação)
+- [Inferência em Reviews Inéditas](#-inferência-em-reviews-inéditas)
+- [Executando no Google Colab](#-executando-no-google-colab)
+
+---
+
+## 📖 Sobre o Projeto
+
+Este projeto desenvolve uma solução ponta a ponta de **Processamento de Linguagem Natural (NLP)** para **Classificação Binária de Sentimentos** (*Positivo* vs. *Negativo*). 
+
+A pipeline abrange:
+- Tokenização e limitação de vocabulário léxico.
+- Padronização sequencial via preenchimento e truncamento (*Padding & Truncating*).
+- Aprendizado de representações semânticas contínuas (*Word Embeddings*).
+- Extração de n-gramas temporais com Convoluções Unidimensionais (**Conv1D**).
+- Avaliação com curvas de aprendizado, matriz de confusão e inferência prática.
+
+---
+
+## 📂 Conjunto de Dados
+
+O modelo foi treinado no **IMDB Large Movie Review Dataset**:
+* **Total:** 50.000 avaliações de cinema em inglês.
+* **Treinamento:** 25.000 amostras rotuladas.
+* **Teste:** 25.000 amostras cegas.
+* **Distribuição:** 50% resenhas positivas / 50% negativas (dataset balanceado).
+* **Vocabulário considerado:** 10.000 palavras mais frequentes.
+* **Extensão máxima:** 250 tokens por sentença.
+
+---
+
+## 🧠 Arquitetura da Rede
+
+```text
+[Input: Sequência (250 tokens)]
+               │
+               ▼
+[Embedding Layer (10.000 → 64 dimensões)]
+               │
+               ▼
+[Conv1D (64 filtros, kernel 5, ReLU)]
+               │
+               ▼
+[MaxPooling1D (pool_size = 4)]
+               │
+               ▼
+[Conv1D (64 filtros, kernel 5, ReLU)]
+               │
+               ▼
+[GlobalMaxPooling1D]
+               │
+               ▼
+[Dense (64 neurônios, ReLU)]
+               │
+               ▼
+[Dropout (0.5)]
+               │
+               ▼
+[Dense (1 neurônio, Sigmoid) → Probabilidade [0.0 - 1.0]]
