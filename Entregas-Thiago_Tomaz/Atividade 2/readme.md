@@ -41,7 +41,7 @@ Treinado no **IMDB Large Movie Review Dataset**:
 
 A rede foi projetada para capturar dependências locais e padrões textuais com alta eficiência computacional:
 
-```text
+
 =================================================================
  Layer (type)                 Output Shape              Param #   
 =================================================================
